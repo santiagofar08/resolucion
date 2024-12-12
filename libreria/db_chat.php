@@ -1,10 +1,6 @@
 <?php 
-$host = "localhost"; 
-$user = "root";
-$pass = ""; 
-$db_name = "biblio_t1"; 
-
-$con = new mysqli($host,$user,$pass,$db_name);
+include ("conexion.php");
+$con = new mysqli(DB_HOST,DB_USER,DB_PASS,DB_NAME);
 
 function formatDate($date){
 	return date('g:i a', strtotime($date));
